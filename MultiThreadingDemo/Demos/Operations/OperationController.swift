@@ -128,9 +128,30 @@ class OperationController: UIViewController {
         queue.addOperations(opArr, waitUntilFinished: true)
     }
     
-    // 自定义Operation类
+    // 自定义Operation类，并发执行任务
     @IBAction func customOPClick(_ sender: Any) {
         // TODO
+        clearImage()
+        
+        let queue = OperationQueue()
+        
+        for index in 0..<imageArr.count {
+            
+            let op = ImageLoadOperation(url: self.imageArr[index]) { (image) in
+                
+                print("\(index) + \(Thread.current)")
+                
+                // 回到主线程设置图片
+                OperationQueue.main.addOperation {
+                    if let loadImage = image {
+                        let imageV = self.containerView.viewWithTag(self.IMAGE_TAG+index) as! UIImageView
+                        imageV.image = loadImage
+                    }
+                }
+            }
+            
+            queue.addOperation(op)
+        }
     }
     
     
