@@ -19,8 +19,5 @@ class ThreadController: UIViewController {
         self.title = "Thread"
         
     }
-    
-
-    
-
 }
+
