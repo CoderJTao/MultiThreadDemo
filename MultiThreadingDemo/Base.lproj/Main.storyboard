@@ -143,20 +143,142 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-Ht-9I4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z2-q3-Flk">
+                                        <rect key="frame" x="21" y="353" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="并发加载"/>
+                                        <connections>
+                                            <action selector="concurrentClick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="WJX-cP-dqE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIf-Bu-IIP">
+                                        <rect key="frame" x="135" y="353" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="栅栏方法"/>
+                                        <connections>
+                                            <action selector="barrierCLick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="6tz-wx-2KQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-5Q-YN2">
+                                        <rect key="frame" x="255" y="353" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="nofify"/>
+                                        <connections>
+                                            <action selector="notifyClick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="6BI-Ee-d2x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dni-YU-T6b">
+                                        <rect key="frame" x="21" y="422" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="wait等待任务"/>
+                                        <connections>
+                                            <action selector="waitClick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="jcj-3p-jN3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F40-vA-IzX">
+                                        <rect key="frame" x="135" y="422" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="延迟执行"/>
+                                        <connections>
+                                            <action selector="afterClick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="4eg-u6-iy0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4T-Vz-ekT">
+                                        <rect key="frame" x="255" y="422" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="队列组"/>
+                                        <connections>
+                                            <action selector="groupClick:" destination="qvL-BK-kVt" eventType="touchUpInside" id="b2Y-Yi-LQa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-H8-Nm8">
+                                <rect key="frame" x="8" y="72" width="112.5" height="151.5"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jpz-H8-Nm8" secondAttribute="height" multiplier="112:151" id="V52-J9-DV0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kcu-LC-18Z">
+                                <rect key="frame" x="128.5" y="72" width="112.5" height="151.5"/>
+                                <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kcu-LC-18Z" secondAttribute="height" multiplier="112:151" id="QxI-3h-60z"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2003" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBP-uO-uj7">
+                                <rect key="frame" x="249" y="72" width="112.5" height="151.5"/>
+                                <color key="backgroundColor" red="0.66531611079999997" green="0.83780110399999996" blue="1" alpha="0.96440360920000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DBP-uO-uj7" secondAttribute="height" multiplier="112:151" id="036-Ml-Tbs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZKV-NU-cjA">
+                                <rect key="frame" x="8" y="231.5" width="112.5" height="153"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.60784313729999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZKV-NU-cjA" secondAttribute="height" multiplier="14:19" id="Noa-kx-2y6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2005" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MkI-xG-OMa">
+                                <rect key="frame" x="128.5" y="231.5" width="112.5" height="153"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.35294117650000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MkI-xG-OMa" secondAttribute="height" multiplier="14:19" id="ZZA-AS-gtp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2006" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V1W-HR-MTC">
+                                <rect key="frame" x="249" y="231.5" width="112.5" height="153"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.63137254899999995" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V1W-HR-MTC" secondAttribute="height" multiplier="14:19" id="jgo-b9-Fgt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MkI-xG-OMa" firstAttribute="top" secondItem="kcu-LC-18Z" secondAttribute="bottom" constant="8" id="1DC-3i-dHj"/>
+                            <constraint firstItem="ZKV-NU-cjA" firstAttribute="top" secondItem="jpz-H8-Nm8" secondAttribute="bottom" constant="8" id="20A-Vm-SLD"/>
+                            <constraint firstItem="jpz-H8-Nm8" firstAttribute="top" secondItem="4cg-rC-2Y0" secondAttribute="top" constant="8" id="2Gz-gz-brW"/>
+                            <constraint firstItem="kcu-LC-18Z" firstAttribute="top" secondItem="4cg-rC-2Y0" secondAttribute="top" constant="8" id="41z-F9-qJL"/>
                             <constraint firstItem="4cg-rC-2Y0" firstAttribute="trailing" secondItem="MQd-Ht-9I4" secondAttribute="trailing" id="6U5-XC-5Rm"/>
+                            <constraint firstItem="V1W-HR-MTC" firstAttribute="width" secondItem="MkI-xG-OMa" secondAttribute="width" id="EPw-eb-0oc"/>
                             <constraint firstItem="MQd-Ht-9I4" firstAttribute="top" secondItem="4cg-rC-2Y0" secondAttribute="top" id="FTU-7t-PzQ"/>
+                            <constraint firstItem="V1W-HR-MTC" firstAttribute="leading" secondItem="MkI-xG-OMa" secondAttribute="trailing" constant="8" id="IzL-eO-Nxz"/>
+                            <constraint firstItem="V1W-HR-MTC" firstAttribute="top" secondItem="DBP-uO-uj7" secondAttribute="bottom" constant="8" id="KRC-Fa-gmr"/>
+                            <constraint firstItem="jpz-H8-Nm8" firstAttribute="leading" secondItem="4cg-rC-2Y0" secondAttribute="leading" constant="8" id="LDH-Gq-b6w"/>
+                            <constraint firstItem="kcu-LC-18Z" firstAttribute="leading" secondItem="jpz-H8-Nm8" secondAttribute="trailing" constant="8" id="LsH-9s-wDi"/>
+                            <constraint firstItem="DBP-uO-uj7" firstAttribute="top" secondItem="4cg-rC-2Y0" secondAttribute="top" constant="8" id="NlG-kb-J9V"/>
+                            <constraint firstItem="jpz-H8-Nm8" firstAttribute="width" secondItem="MQd-Ht-9I4" secondAttribute="width" multiplier="0.3" id="OnS-Qj-MKZ"/>
+                            <constraint firstItem="DBP-uO-uj7" firstAttribute="width" secondItem="kcu-LC-18Z" secondAttribute="width" id="PQD-vO-d4T"/>
+                            <constraint firstItem="ZKV-NU-cjA" firstAttribute="leading" secondItem="4cg-rC-2Y0" secondAttribute="leading" constant="8" id="Uc7-wL-bVb"/>
                             <constraint firstItem="MQd-Ht-9I4" firstAttribute="leading" secondItem="4cg-rC-2Y0" secondAttribute="leading" id="V8f-bd-H6w"/>
                             <constraint firstItem="4cg-rC-2Y0" firstAttribute="bottom" secondItem="MQd-Ht-9I4" secondAttribute="bottom" id="Wqs-r7-d3U"/>
+                            <constraint firstItem="kcu-LC-18Z" firstAttribute="width" secondItem="jpz-H8-Nm8" secondAttribute="width" id="arL-wd-xuW"/>
+                            <constraint firstItem="MkI-xG-OMa" firstAttribute="width" secondItem="ZKV-NU-cjA" secondAttribute="width" id="cxb-dW-LWo"/>
+                            <constraint firstItem="ZKV-NU-cjA" firstAttribute="width" secondItem="jpz-H8-Nm8" secondAttribute="width" id="euW-Be-nr2"/>
+                            <constraint firstItem="MkI-xG-OMa" firstAttribute="leading" secondItem="ZKV-NU-cjA" secondAttribute="trailing" constant="8" id="f8r-JE-mSI"/>
+                            <constraint firstItem="DBP-uO-uj7" firstAttribute="leading" secondItem="kcu-LC-18Z" secondAttribute="trailing" constant="8" id="xkl-cc-cQc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4cg-rC-2Y0"/>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="MQd-Ht-9I4" id="nig-eC-Piy"/>
+                        <outlet property="containerView" destination="MQd-Ht-9I4" id="W5v-gk-Dtu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azA-i4-92M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,7 +339,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7X-jh-rkI">
-                                        <rect key="frame" x="12" y="364" width="104" height="41"/>
+                                        <rect key="frame" x="31" y="363" width="104" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -236,16 +358,6 @@
                                             <action selector="serialClick:" destination="4gE-iE-d3E" eventType="touchUpInside" id="Ctb-Qh-dkS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug6-jZ-kX1">
-                                        <rect key="frame" x="12" y="461" width="104" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="依赖加载"/>
-                                        <connections>
-                                            <action selector="dependClick:" destination="4gE-iE-d3E" eventType="touchUpInside" id="K83-AX-Ehs"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-lH-6ze">
                                         <rect key="frame" x="200" y="461" width="114" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,6 +366,16 @@
                                         <state key="normal" title="自定义Operation"/>
                                         <connections>
                                             <action selector="customOPClick:" destination="4gE-iE-d3E" eventType="touchUpInside" id="ct2-e4-Uo1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug6-jZ-kX1">
+                                        <rect key="frame" x="31" y="461" width="104" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.60784313729999995" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="依赖加载"/>
+                                        <connections>
+                                            <action selector="dependClick:" destination="4gE-iE-d3E" eventType="touchUpInside" id="K83-AX-Ehs"/>
                                         </connections>
                                     </button>
                                 </subviews>
